@@ -1,0 +1,28 @@
+{
+  "name": "bun-plugin-babel",
+  "main": "dist/index.js",
+  "type": "module",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "bun run build.ts",
+    "prepublishOnly": "bun run build",
+    "format": "prettier --write . && eslint --ext .js,.jsx,.ts,.tsx . --fix",
+    "test:imports": "bunx dpdm ./src/index.ts"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "bun"
+  ],
+  "devDependencies": {
+    "@types/bun": "^1.1.0",
+    "bun-plugin-dts": "^0.2.3"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "esbuild-plugin-babel": "^0.2.3"
+  }
+}
